@@ -24,3 +24,218 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+/* Strict palette: Pure White, Deep Solid Black, Corporate Premium Blue (#2563eb) */
+:root {
+  --white: #FFFFFF;
+  --black: #000000;
+  --corporate-blue: #2563eb;
+  --muted-gray: #6b6b6b;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--white);
+  color: var(--black);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.25rem 1rem;
+}
+
+/* HERO */
+.hero-section {
+  background: var(--white);
+  color: var(--black);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 1rem;
+  text-align: center;
+  overflow: visible;
+}
+
+.hero-watermark {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f3f4f6;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-content { position: relative; z-index: 10; max-width: 960px; }
+
+.hero-title {
+  margin: 0;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-weight: 700;
+  font-size: 2.75rem;
+  line-height: 1.02;
+  color: var(--black);
+}
+
+.hero-sub {
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: var(--black);
+}
+
+.hero-tagline {
+  margin-top: 0.25rem;
+  color: var(--muted-gray);
+}
+
+.hero-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1rem;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--corporate-blue);
+  color: var(--white);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--black);
+  border: 2px solid var(--corporate-blue);
+}
+
+/* ABOUT */
+.about-section {
+  background: var(--black);
+  color: var(--white);
+  padding: 3.5rem 0;
+}
+
+.about-section h2 { margin-top: 0; color: var(--white); font-size: 1.5rem; }
+.about-section p { color: rgba(255,255,255,0.9); line-height: 1.6; }
+
+/* EXPERTISE */
+.expertise-section {
+  background: var(--white);
+  color: var(--black);
+  padding: 3.5rem 0;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid rgba(0,0,0,0.06);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* BOOKING SECTION */
+.booking-section {
+  background: var(--black);
+  color: var(--white);
+  padding: 3.5rem 0;
+}
+
+.section-title {
+  color: var(--white);
+  margin: 0 0 1rem 0;
+}
+
+.booking-wrap {
+  display: flex;
+  justify-content: center;
+  padding-top: 0.5rem;
+}
+
+.booking-card {
+  width: 100%;
+  max-width: 720px;
+  background: var(--white);
+  color: #111;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.label { display: block; margin-bottom: 0.75rem; }
+.label-text { display: block; margin-bottom: 0.375rem; font-weight: 600; color: #111; }
+
+.input, .textarea {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  color: #111;
+  background: var(--white);
+  box-sizing: border-box;
+  font-size: 0.95rem;
+}
+
+.textarea { min-height: 96px; resize: vertical; }
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.form-actions { display: flex; justify-content: flex-end; margin-top: 0.6rem; }
+.form-actions .btn-primary { background: var(--corporate-blue); color: var(--white); border: none; }
+
+/* FOOTER */
+.footer-section {
+  background: var(--white);
+  color: var(--black);
+  padding: 2.5rem 0;
+}
+
+.footer-grid {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.footer-brand { margin: 0 0 0.5rem 0; font-weight: 700; }
+.muted { color: #111; opacity: 0.8; margin: 0.25rem 0; }
+
+@media (max-width: 720px) {
+  .hero-title { font-size: 1.75rem; }
+  .row { grid-template-columns: 1fr; }
+  .footer-grid { flex-direction: column; gap: 1rem; }
+}
