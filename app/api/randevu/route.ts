@@ -12,7 +12,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Eksik bilgi" }, { status: 400 });
     }
 
-    await resend.emails.send({
+    const { data, error } = await resend.emails.send({
       from: "Randevu Formu <onboarding@resend.dev>",
       to: "av.aysesenpekmezci@gmail.com",
       replyTo: email,
@@ -29,9 +29,16 @@ export async function POST(request: Request) {
       `,
     });
 
-    return NextResponse.json({ success: true });
+    if (error) {
+      // Resend gerçek hatayı buraya koyar (örn. domain doğrulanmadı, izin verilmeyen alıcı vb.)
+      console.error("RESEND HATASI:", error);
+      return NextResponse.json({ error: error.message || "Mail gönderilemedi" }, { status: 500 });
+    }
+
+    console.log("Mail başarıyla gönderildi, Resend ID:", data?.id);
+    return NextResponse.json({ success: true, id: data?.id });
   } catch (error) {
-    console.error(error);
+    console.error("SUNUCU HATASI:", error);
     return NextResponse.json({ error: "Mail gönderilemedi" }, { status: 500 });
   }
 }

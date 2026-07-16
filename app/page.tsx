@@ -1,5 +1,3 @@
-
-
 "use client";
 
 import React, { useState } from "react";
@@ -19,7 +17,9 @@ import {
   ShieldCheck,
   Eye,
   Target,
-  CheckCircle2
+  CheckCircle2,
+  Menu,
+  X
 } from "lucide-react";
 
 const expertises = [
@@ -55,6 +55,7 @@ export default function Page() {
   const [submitted, setSubmitted] = useState(false);
   const [errors, setErrors] = useState<{ email?: string; phone?: string; date?: string; time?: string; general?: string }>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const todayString = getTodayDateString();
 
@@ -64,6 +65,10 @@ export default function Page() {
 
   function handleSelectChange(e: React.ChangeEvent<HTMLSelectElement>) {
     setMeetingType(e.target.value as "office" | "online");
+  }
+
+  function closeMobileMenu() {
+    setMobileMenuOpen(false);
   }
 
   async function onSubmit(e: React.FormEvent) {
@@ -145,10 +150,40 @@ export default function Page() {
             <a href="#randevu" className="hover:text-[#C5A880] transition-colors">Randevu</a>
             <a href="#iletisim" className="hover:text-[#C5A880] transition-colors">İletişim</a>
           </nav>
-          <a href="#randevu" className="bg-[#C5A880] hover:bg-[#b0936b] text-white px-5 py-2.5 text-xs font-semibold uppercase tracking-wider transition-colors">
-            Randevu Al
-          </a>
+          <div className="flex items-center gap-3">
+            <a href="#randevu" className="hidden sm:inline-block bg-[#C5A880] hover:bg-[#b0936b] text-white px-5 py-2.5 text-xs font-semibold uppercase tracking-wider transition-colors">
+              Randevu Al
+            </a>
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen((v) => !v)}
+              className="md:hidden inline-flex items-center justify-center w-10 h-10 text-stone-700 hover:text-[#C5A880] transition-colors"
+              aria-label="Menüyü aç/kapat"
+              aria-expanded={mobileMenuOpen}
+            >
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
+
+        {/* MOBİL MENÜ */}
+        {mobileMenuOpen && (
+          <nav className="md:hidden border-t border-stone-200/60 bg-white/95 backdrop-blur-md">
+            <div className="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-1 text-sm font-medium text-stone-700">
+              <a href="#hakkimda" onClick={closeMobileMenu} className="py-3 border-b border-stone-100 hover:text-[#C5A880] transition-colors">Hakkımızda</a>
+              <a href="#uzmanlik" onClick={closeMobileMenu} className="py-3 border-b border-stone-100 hover:text-[#C5A880] transition-colors">Uzmanlık Alanları</a>
+              <a href="#randevu" onClick={closeMobileMenu} className="py-3 border-b border-stone-100 hover:text-[#C5A880] transition-colors">Randevu</a>
+              <a href="#iletisim" onClick={closeMobileMenu} className="py-3 hover:text-[#C5A880] transition-colors">İletişim</a>
+              <a
+                href="#randevu"
+                onClick={closeMobileMenu}
+                className="mt-3 bg-[#C5A880] hover:bg-[#b0936b] text-white text-center px-5 py-3 text-xs font-semibold uppercase tracking-wider transition-colors"
+              >
+                Randevu Al
+              </a>
+            </div>
+          </nav>
+        )}
       </header>
 
       {/* HERO ALANI */}
