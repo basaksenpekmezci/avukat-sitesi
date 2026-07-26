@@ -41,6 +41,36 @@ function getTodayDateString() {
   return `${year}-${month}-${day}`;
 }
 
+function isWeekend(dateStr: string) {
+  if (!dateStr) return false;
+  const [year, month, day] = dateStr.split("-").map(Number);
+  const date = new Date(year, month - 1, day);
+  const dayOfWeek = date.getDay();
+  return dayOfWeek === 0 || dayOfWeek === 6;
+}
+
+function validateField(name: string, value: string): string | undefined {
+  if (name === "email") {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(value)) return "Lütfen geçerli bir e-posta adresi giriniz.";
+  }
+  if (name === "phone") {
+    const phoneDigits = value.replace(/\D/g, "");
+    const phoneRegex = /^(90)?0?5\d{9}$/;
+    if (!phoneRegex.test(phoneDigits)) return "Lütfen geçerli bir telefon numarası giriniz. (Örn: 05XX XXX XX XX)";
+  }
+  if (name === "date") {
+    if (value && value < getTodayDateString()) return "Lütfen bugünden itibaren bir tarih seçiniz.";
+    if (isWeekend(value)) return "Randevular yalnızca hafta içi (Pazartesi - Cuma) alınabilir.";
+  }
+  if (name === "time" && value) {
+    const [hour, minute] = value.split(":").map(Number);
+    const totalMinutes = hour * 60 + minute;
+    if (totalMinutes < 8 * 60 + 30 || totalMinutes > 17 * 60 + 30) return "Lütfen mesai saatleri içinde (08:30 - 17:30) bir saat seçiniz.";
+  }
+  return undefined;
+}
+
 export default function Page() {
   const [meetingType, setMeetingType] = useState<"office" | "online">("office");
   const [form, setForm] = useState({ 
@@ -60,7 +90,17 @@ export default function Page() {
   const todayString = getTodayDateString();
 
   function onChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
-    setForm((s) => ({ ...s, [e.target.name]: e.target.value }));
+    const { name, value } = e.target;
+    setForm((s) => ({ ...s, [name]: value }));
+    if (name === "date" || name === "time") {
+      const error = validateField(name, value);
+      setErrors((prev) => ({ ...prev, [name]: error }));
+    }
+  }
+
+  function onBlur(e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) {
+    const error = validateField(e.target.name, e.target.value);
+    setErrors((prev) => ({ ...prev, [e.target.name]: error }));
   }
 
   function handleSelectChange(e: React.ChangeEvent<HTMLSelectElement>) {
@@ -90,6 +130,8 @@ export default function Page() {
 
     if (form.date && form.date < todayString) {
       newErrors.date = "Lütfen bugünden itibaren bir tarih seçiniz.";
+    } else if (isWeekend(form.date)) {
+      newErrors.date = "Randevular yalnızca hafta içi (Pazartesi - Cuma) alınabilir.";
     }
 
     if (form.time) {
@@ -364,17 +406,17 @@ export default function Page() {
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="flex flex-col gap-1.5">
                   <label className="text-[11px] font-semibold text-stone-500 uppercase tracking-wider">E-posta Adresi</label>
-                  <input name="email" type="email" value={form.email} onChange={onChange} className="w-full h-11 px-4 bg-stone-50 border border-stone-200 text-stone-900 focus:outline-none focus:border-[#C5A880] text-sm transition-colors" required />
+                  <input name="email" type="email" value={form.email} onChange={onChange} onBlur={onBlur} className="w-full h-11 px-4 bg-stone-50 border border-stone-200 text-stone-900 focus:outline-none focus:border-[#C5A880] text-sm transition-colors" required />
                   {errors.email && <p className="text-[11px] text-red-600 font-light">{errors.email}</p>}
                 </div>
                 <div className="flex flex-col gap-1.5">
                   <label className="text-[11px] font-semibold text-stone-500 uppercase tracking-wider">Telefon Numarası</label>
-                  <input name="phone" value={form.phone} onChange={onChange} className="w-full h-11 px-4 bg-stone-50 border border-stone-200 text-stone-900 focus:outline-none focus:border-[#C5A880] text-sm transition-colors" required />
+                  <input name="phone" value={form.phone} onChange={onChange} onBlur={onBlur} className="w-full h-11 px-4 bg-stone-50 border border-stone-200 text-stone-900 focus:outline-none focus:border-[#C5A880] text-sm transition-colors" required />
                   {errors.phone && <p className="text-[11px] text-red-600 font-light">{errors.phone}</p>}
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-2 gap-4">
                 <div className="flex flex-col gap-1.5">
                   <label className="text-[11px] font-semibold text-stone-500 uppercase tracking-wider">Tercih Edilen Tarih</label>
                   <input type="date" name="date" min={todayString} value={form.date} onChange={onChange} className="w-full min-w-0 h-11 px-2 sm:px-4 bg-stone-50 border border-stone-200 text-stone-900 focus:outline-none focus:border-[#C5A880] text-[13px] sm:text-sm transition-colors" required />
