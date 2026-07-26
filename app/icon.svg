@@ -1,0 +1,6 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" fill="#1c1917"/>
+  <rect x="16" y="16" width="480" height="480" fill="none" stroke="#C5A880" stroke-width="2"/>
+  <text x="256" y="300" font-family="Georgia, 'Times New Roman', serif" font-size="200" font-weight="500" fill="#C5A880" text-anchor="middle">AŞ</text>
+  <line x1="176" y1="336" x2="336" y2="336" stroke="#C5A880" stroke-width="3"/>
+</svg>
