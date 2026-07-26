@@ -374,7 +374,7 @@ export default function Page() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="flex flex-col gap-1.5">
                   <label className="text-[11px] font-semibold text-stone-500 uppercase tracking-wider">Tercih Edilen Tarih</label>
                   <input type="date" name="date" min={todayString} value={form.date} onChange={onChange} className="w-full h-11 px-4 bg-stone-50 border border-stone-200 text-stone-900 focus:outline-none focus:border-[#C5A880] text-sm transition-colors" required />
