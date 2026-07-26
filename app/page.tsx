@@ -374,15 +374,15 @@ export default function Page() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-3">
                 <div className="flex flex-col gap-1.5">
                   <label className="text-[11px] font-semibold text-stone-500 uppercase tracking-wider">Tercih Edilen Tarih</label>
-                  <input type="date" name="date" min={todayString} value={form.date} onChange={onChange} className="w-full h-11 px-4 bg-stone-50 border border-stone-200 text-stone-900 focus:outline-none focus:border-[#C5A880] text-sm transition-colors" required />
+                  <input type="date" name="date" min={todayString} value={form.date} onChange={onChange} className="w-full min-w-0 h-11 px-2 sm:px-4 bg-stone-50 border border-stone-200 text-stone-900 focus:outline-none focus:border-[#C5A880] text-[13px] sm:text-sm transition-colors" required />
                   {errors.date && <p className="text-[11px] text-red-600 font-light">{errors.date}</p>}
                 </div>
                 <div className="flex flex-col gap-1.5">
                   <label className="text-[11px] font-semibold text-stone-500 uppercase tracking-wider">Tercih Edilen Saat</label>
-                  <input type="time" name="time" min="08:30" max="17:30" value={form.time} onChange={onChange} className="w-full h-11 px-4 bg-stone-50 border border-stone-200 text-stone-900 focus:outline-none focus:border-[#C5A880] text-sm transition-colors" required />
+                  <input type="time" name="time" min="08:30" max="17:30" value={form.time} onChange={onChange} className="w-full min-w-0 h-11 px-2 sm:px-4 bg-stone-50 border border-stone-200 text-stone-900 focus:outline-none focus:border-[#C5A880] text-[13px] sm:text-sm transition-colors" required />
                   {errors.time && <p className="text-[11px] text-red-600 font-light">{errors.time}</p>}
                 </div>
               </div>
