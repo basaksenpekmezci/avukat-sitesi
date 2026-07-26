@@ -13,8 +13,10 @@ export async function POST(request: Request) {
     }
 
     const { data, error } = await resend.emails.send({
-      from: "Randevu Formu <onboarding@resend.dev>",
-      to: "senpekmezcibasak@gmail.com",
+      
+      from: "Randevu Formu <randevu@senpekmezcihukuk.com>",
+      
+      to: "av.aysesenpekmezci@gmail.com",
       replyTo: email,
       subject: `Yeni Randevu Talebi - ${name}`,
       html: `
