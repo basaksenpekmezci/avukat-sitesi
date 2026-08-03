@@ -287,9 +287,6 @@ export default function Page() {
         {/* Kurumsal Sağ Kart */}
         <div className="md:col-span-5 flex justify-center md:justify-end animate-fade-in-up">
           <div className="relative w-full max-w-[340px] aspect-[3/4] bg-white border border-stone-200 p-8 flex flex-col items-center text-center shadow-md">
-            <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-stone-900 -mt-1 -ml-1"></div>
-            <div className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-stone-900 -mb-1 -mr-1"></div>
-
             <div className="space-y-4 w-full">
               <div className="w-12 h-[1px] bg-[#C5A880] mx-auto"></div>
               <h2 className="text-lg font-serif tracking-widest text-stone-900 uppercase font-medium leading-snug">
@@ -301,7 +298,7 @@ export default function Page() {
             <div className="flex-1 w-full flex items-center justify-center">
               <svg
                 viewBox="0 0 200 220"
-                className="w-32 h-32 md:w-40 md:h-40 justice-scale"
+                className="w-44 h-44 md:w-52 md:h-52 justice-scale"
                 fill="none"
               >
                 <g className="justice-scale-fixed">
