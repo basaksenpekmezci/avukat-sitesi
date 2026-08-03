@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 
 export const metadata = {
-  title: 'Senpekmezci Hukuk ve Danışmanlık',
+  title: 'Şenpekmezci Hukuk ve Danışmanlık',
   description: 'Avukat Ayşe Senpekmezci - Hukukta Güven ve Şeffaflık',
 }
 
