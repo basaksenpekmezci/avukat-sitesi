@@ -503,13 +503,20 @@ export default function Page() {
             <h3 className="text-base text-stone-900 font-medium font-serif">Şenpekmezci Hukuk ve Danışmanlık Bürosu</h3>
             <div className="space-y-2 font-light text-stone-600">
               <p className="flex items-center gap-2"><MapPin size={16} className="text-[#C5A880]" /> Fatih Mah. 35 Nolu Sk. Kardelen Apt A Blok Kat:5 Daire:13 Şehitkamil/Gaziantep </p>
-              <p className="flex items-center gap-2"><Phone size={16} className="text-[#C5A880]" /> +90 536 630 99 63</p>
-              <p className="flex items-center gap-2"><Mail size={16} className="text-[#C5A880]" /> av.aysesenpekmezci@gmail.com</p>
+              <p className="flex items-center gap-2">
+                <Phone size={16} className="text-[#C5A880]" />
+                <a href="tel:+905366309963" className="hover:text-[#C5A880] transition-colors">+90 536 630 99 63</a>
+              </p>
+              <p className="flex items-center gap-2">
+                <Mail size={16} className="text-[#C5A880]" />
+                <a href="mailto:av.aysesenpekmezci@gmail.com" className="hover:text-[#C5A880] transition-colors">av.aysesenpekmezci@gmail.com</a>
+              </p>
             </div>
           </div>
           <div className="md:col-span-4 space-y-2 md:border-l md:border-stone-200 md:pl-12">
             <h4 className="text-stone-900 font-medium flex items-center gap-2"><Clock size={16} className="text-[#C5A880]" /> Çalışma Saatleri</h4>
             <p className="font-light">Hafta İçi: 08:30 - 17:30</p>
+            <p className="font-light">Hafta İçi Hizmet Vermekteyiz</p>
           </div>
         </div>
       </footer>
