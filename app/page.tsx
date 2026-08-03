@@ -193,6 +193,13 @@ export default function Page() {
             <a href="#iletisim" className="hover:text-[#C5A880] transition-colors">İletişim</a>
           </nav>
           <div className="flex items-center gap-3">
+            <a
+              href="tel:+905366309963"
+              className="flex items-center gap-2 text-sm font-semibold text-stone-800 hover:text-[#C5A880] transition-colors"
+            >
+              <Phone size={18} className="text-[#C5A880]" />
+              <span className="hidden sm:inline">+90 536 630 99 63</span>
+            </a>
             <a href="#randevu" className="hidden sm:inline-block bg-[#C5A880] hover:bg-[#b0936b] text-white px-5 py-2.5 text-xs font-semibold uppercase tracking-wider transition-colors">
               Randevu Al
             </a>
@@ -245,7 +252,7 @@ export default function Page() {
           </div>
           <div className="grid grid-cols-3 gap-6 pt-8 border-t border-stone-200">
             <div>
-              <div className="text-2xl font-serif text-stone-900">5+</div>
+              <div className="text-2xl font-serif text-stone-900">7+</div>
               <div className="text-xs text-stone-500">Yıl Deneyim</div>
             </div>
             <div>
@@ -416,14 +423,14 @@ export default function Page() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-4 items-start">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4">
                 <div className="flex flex-col gap-1.5">
-                  <label className="min-h-[32px] flex items-end text-[11px] font-semibold text-stone-500 uppercase tracking-wider">Tercih Edilen Tarih</label>
+                  <label className="whitespace-nowrap text-[9px] sm:text-[11px] font-semibold text-stone-500 uppercase tracking-wide sm:tracking-wider">Tercih Edilen Tarih</label>
                   <input type="date" name="date" min={todayString} value={form.date} onChange={onChange} onBlur={onBlur} className="w-full min-w-0 h-11 px-2 sm:px-4 bg-stone-50 border border-stone-200 text-stone-900 focus:outline-none focus:border-[#C5A880] text-[13px] sm:text-sm transition-colors" required />
                   {errors.date && <p className="text-[11px] text-red-600 font-light">{errors.date}</p>}
                 </div>
                 <div className="flex flex-col gap-1.5">
-                  <label className="min-h-[32px] flex items-end text-[11px] font-semibold text-stone-500 uppercase tracking-wider">Tercih Edilen Saat</label>
+                  <label className="whitespace-nowrap text-[9px] sm:text-[11px] font-semibold text-stone-500 uppercase tracking-wide sm:tracking-wider">Tercih Edilen Saat</label>
                   <input type="time" name="time" min="08:30" max="17:30" value={form.time} onChange={onChange} onBlur={onBlur} className="w-full min-w-0 h-11 px-2 sm:px-4 bg-stone-50 border border-stone-200 text-stone-900 focus:outline-none focus:border-[#C5A880] text-[13px] sm:text-sm transition-colors" required />
                   {errors.time && <p className="text-[11px] text-red-600 font-light">{errors.time}</p>}
                 </div>
