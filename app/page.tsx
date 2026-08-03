@@ -286,7 +286,7 @@ export default function Page() {
 
         {/* Kurumsal Sağ Kart */}
         <div className="md:col-span-5 flex justify-center md:justify-end animate-fade-in-up">
-          <div className="relative w-full max-w-[340px] aspect-[3/4] bg-white border border-stone-200 p-8 flex flex-col items-center text-center shadow-md">
+          <div className="relative w-full max-w-[340px] aspect-[3/4] bg-[#FAF9F6] border border-stone-200 p-8 flex flex-col items-center text-center shadow-md">
             <div className="space-y-4 w-full">
               <div className="w-12 h-[1px] bg-[#C5A880] mx-auto"></div>
               <h2 className="text-lg font-serif tracking-widest text-stone-900 uppercase font-medium leading-snug">
