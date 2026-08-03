@@ -182,6 +182,22 @@ export default function Page() {
           to { opacity: 1; transform: translateY(0); }
         }
         .animate-fade-in-up { animation: fadeInUp 0.6s ease-out forwards; }
+
+        .justice-scale .draw-path {
+          stroke-dasharray: 100;
+          stroke-dashoffset: 100;
+          animation: scaleDraw 0.6s ease-out forwards;
+        }
+        @keyframes scaleDraw {
+          to { stroke-dashoffset: 0; }
+        }
+        .justice-scale .justice-scale-beam {
+          animation: scaleSway 3.6s ease-in-out 2.6s infinite;
+        }
+        @keyframes scaleSway {
+          0%, 100% { transform: rotate(-2deg); }
+          50% { transform: rotate(2deg); }
+        }
       `}</style>
 
       {/* NAVBAR */}
@@ -270,20 +286,42 @@ export default function Page() {
 
         {/* Kurumsal Sağ Kart */}
         <div className="md:col-span-5 flex justify-center md:justify-end animate-fade-in-up">
-          <div className="relative w-full max-w-[340px] aspect-[3/4] bg-white border border-stone-200 p-8 flex flex-col justify-center items-center text-center shadow-md">
+          <div className="relative w-full max-w-[340px] aspect-[3/4] bg-white border border-stone-200 p-8 flex flex-col items-center text-center shadow-md">
             <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-stone-900 -mt-1 -ml-1"></div>
             <div className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-stone-900 -mb-1 -mr-1"></div>
-            
-            <div className="space-y-4">
+
+            <div className="space-y-4 w-full">
               <div className="w-12 h-[1px] bg-[#C5A880] mx-auto"></div>
               <h2 className="text-lg font-serif tracking-widest text-stone-900 uppercase font-medium leading-snug">
                 ŞENPEKMEZCİ <br /> <span className="text-xs font-light text-stone-500 tracking-normal block mt-1">HUKUK & DANIŞMANLIK</span>
               </h2>
               <div className="w-12 h-[1px] bg-[#C5A880] mx-auto"></div>
-              <div className="pt-6">
-                <h3 className="text-sm text-stone-800 font-medium tracking-wide">Av. Ayşe Şenpekmezci</h3>
-                <p className="text-[10px] text-stone-400 uppercase tracking-widest mt-1">Kurucu / Avukat</p>
-              </div>
+            </div>
+
+            <div className="flex-1 w-full flex items-center justify-center">
+              <svg
+                viewBox="0 0 200 220"
+                className="w-32 h-32 md:w-40 md:h-40 justice-scale"
+                fill="none"
+              >
+                <g className="justice-scale-fixed">
+                  <line className="draw-path" pathLength={100} x1="100" y1="30" x2="100" y2="170" stroke="#C5A880" strokeWidth="1.5" strokeLinecap="round" style={{ animationDelay: "0s" }} />
+                  <line className="draw-path" pathLength={100} x1="70" y1="170" x2="130" y2="170" stroke="#C5A880" strokeWidth="1.5" strokeLinecap="round" style={{ animationDelay: "0.15s" }} />
+                  <circle className="draw-path" pathLength={100} cx="100" cy="30" r="5" stroke="#C5A880" strokeWidth="1.5" style={{ animationDelay: "0.5s" }} />
+                </g>
+                <g className="justice-scale-beam" style={{ transformOrigin: "100px 30px", transformBox: "view-box" }}>
+                  <line className="draw-path" pathLength={100} x1="35" y1="30" x2="165" y2="30" stroke="#C5A880" strokeWidth="1.5" strokeLinecap="round" style={{ animationDelay: "0.9s" }} />
+                  <line className="draw-path" pathLength={100} x1="35" y1="30" x2="35" y2="75" stroke="#C5A880" strokeWidth="1.2" style={{ animationDelay: "1.6s" }} />
+                  <path className="draw-path" pathLength={100} d="M15 75 Q35 100 55 75" stroke="#C5A880" strokeWidth="1.2" strokeLinecap="round" style={{ animationDelay: "1.9s" }} />
+                  <line className="draw-path" pathLength={100} x1="165" y1="30" x2="165" y2="75" stroke="#C5A880" strokeWidth="1.2" style={{ animationDelay: "1.6s" }} />
+                  <path className="draw-path" pathLength={100} d="M145 75 Q165 100 185 75" stroke="#C5A880" strokeWidth="1.2" strokeLinecap="round" style={{ animationDelay: "1.9s" }} />
+                </g>
+              </svg>
+            </div>
+
+            <div className="pb-2">
+              <h3 className="text-base font-serif text-stone-900 tracking-wide">Ayşe Şenpekmezci</h3>
+              <p className="text-[10px] text-[#C5A880] uppercase tracking-widest mt-1 font-medium">Kurucu Ortak</p>
             </div>
           </div>
         </div>
