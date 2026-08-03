@@ -19,7 +19,8 @@ import {
   Target,
   CheckCircle2,
   Menu,
-  X
+  X,
+  MessageCircle
 } from "lucide-react";
 
 const expertises = [
@@ -88,6 +89,7 @@ export default function Page() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const todayString = getTodayDateString();
+  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("Fatih Mah. 35 Nolu Sk. Kardelen Apt A Blok Kat:5 Daire:13 Şehitkamil/Gaziantep")}`;
 
   function onChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
     const { name, value } = e.target;
@@ -476,6 +478,35 @@ export default function Page() {
           </div>
         </div>
       </footer>
+
+      {/* SABİT AKSİYON BUTONLARI */}
+      <div className="fixed bottom-6 right-6 z-[100] flex flex-col items-center gap-3">
+        <a
+          href="tel:+905366309963"
+          aria-label="Telefon ile ara"
+          className="w-12 h-12 rounded-full bg-[#C5A880] hover:bg-[#b0936b] shadow-lg flex items-center justify-center text-white transition-colors"
+        >
+          <Phone size={20} />
+        </a>
+        <a
+          href="https://wa.me/905366309963"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="WhatsApp ile mesaj gönder"
+          className="w-12 h-12 rounded-full bg-[#C5A880] hover:bg-[#b0936b] shadow-lg flex items-center justify-center text-white transition-colors"
+        >
+          <MessageCircle size={20} />
+        </a>
+        <a
+          href={mapsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Google Haritalar'da konumu görüntüle"
+          className="w-12 h-12 rounded-full bg-[#C5A880] hover:bg-[#b0936b] shadow-lg flex items-center justify-center text-white transition-colors"
+        >
+          <MapPin size={20} />
+        </a>
+      </div>
 
     </main>
   );
