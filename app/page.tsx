@@ -202,30 +202,23 @@ export default function Page() {
 
       {/* NAVBAR */}
       <header className="w-full bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-stone-200/60">
-        <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between gap-2">
+        <div className="max-w-6xl mx-auto px-4 lg:px-6 h-20 flex items-center justify-between gap-2">
           <div className="text-base sm:text-xl font-semibold text-stone-900 tracking-tight font-serif whitespace-nowrap">Av. Ayşe Şenpekmezci</div>
-          <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-stone-600">
+          <nav className="hidden md:flex items-center gap-2 lg:gap-8 text-sm font-medium text-stone-600 whitespace-nowrap">
             <a href="#hakkimda" className="hover:text-[#C5A880] transition-colors">Hakkımızda</a>
             <a href="#uzmanlik" className="hover:text-[#C5A880] transition-colors">Uzmanlık Alanları</a>
             <a href="#randevu" className="hover:text-[#C5A880] transition-colors">Randevu</a>
             <a href="#iletisim" className="hover:text-[#C5A880] transition-colors">İletişim</a>
           </nav>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-1 lg:gap-3">
             <a
               href="tel:+905366309963"
-              className="hidden md:flex items-center gap-2 text-sm font-semibold text-stone-800 hover:text-[#C5A880] transition-colors"
-            >
-              <Phone size={18} className="text-[#C5A880]" />
-              <span>+90 536 630 99 63</span>
-            </a>
-            <a
-              href="tel:+905366309963"
-              className="md:hidden inline-flex items-center gap-1.5 whitespace-nowrap bg-[#C5A880] hover:bg-[#b0936b] text-white px-3 py-2 text-[11px] font-semibold transition-colors"
+              className="inline-flex items-center gap-1 lg:gap-2 whitespace-nowrap bg-[#C5A880] hover:bg-[#b0936b] text-white px-2.5 py-2 lg:px-5 lg:py-2.5 text-[11px] lg:text-xs font-semibold transition-colors"
             >
               <Phone size={13} />
               Bizi Arayın
             </a>
-            <a href="#randevu" className="hidden sm:inline-block bg-[#C5A880] hover:bg-[#b0936b] text-white px-5 py-2.5 text-xs font-semibold uppercase tracking-wider transition-colors">
+            <a href="#randevu" className="hidden sm:inline-block whitespace-nowrap bg-[#C5A880] hover:bg-[#b0936b] text-white px-2.5 py-2 lg:px-5 lg:py-2.5 text-[11px] lg:text-xs font-semibold uppercase tracking-wider transition-colors">
               Randevu Al
             </a>
             <button
