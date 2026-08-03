@@ -286,19 +286,19 @@ export default function Page() {
 
         {/* Kurumsal Sağ Kart */}
         <div className="md:col-span-5 flex justify-center md:justify-end animate-fade-in-up">
-          <div className="relative w-full max-w-[385px] aspect-[3/4] bg-[#FAF9F6] border border-stone-200 p-9 flex flex-col items-center text-center shadow-md">
+          <div className="relative w-full max-w-[430px] aspect-[3/4] bg-[#FAF9F6] border border-stone-200 p-10 flex flex-col items-center text-center shadow-md">
             <div className="space-y-4 w-full">
-              <div className="w-14 h-[1px] bg-[#C5A880] mx-auto"></div>
-              <h2 className="text-xl font-serif tracking-widest text-stone-900 uppercase font-medium leading-snug">
-                ŞENPEKMEZCİ <br /> <span className="text-[13px] font-light text-stone-500 tracking-normal block mt-1">HUKUK & DANIŞMANLIK</span>
+              <div className="w-16 h-[1px] bg-[#C5A880] mx-auto"></div>
+              <h2 className="text-[22px] font-serif tracking-widest text-stone-900 uppercase font-medium leading-snug">
+                ŞENPEKMEZCİ <br /> <span className="text-[15px] font-light text-stone-500 tracking-normal block mt-1">HUKUK & DANIŞMANLIK</span>
               </h2>
-              <div className="w-14 h-[1px] bg-[#C5A880] mx-auto"></div>
+              <div className="w-16 h-[1px] bg-[#C5A880] mx-auto"></div>
             </div>
 
             <div className="flex-1 w-full flex items-center justify-center">
               <svg
                 viewBox="0 0 200 220"
-                className="w-48 h-48 md:w-60 md:h-60 justice-scale"
+                className="w-[215px] h-[215px] md:w-[269px] md:h-[269px] justice-scale"
                 fill="none"
               >
                 <g className="justice-scale-fixed">
@@ -317,8 +317,8 @@ export default function Page() {
             </div>
 
             <div className="pb-2">
-              <h3 className="text-lg font-serif text-stone-900 tracking-wide">Ayşe Şenpekmezci</h3>
-              <p className="text-[11px] text-[#C5A880] uppercase tracking-widest mt-1 font-medium">Kurucu Ortak</p>
+              <h3 className="text-xl font-serif text-stone-900 tracking-wide">Ayşe Şenpekmezci</h3>
+              <p className="text-xs text-[#C5A880] uppercase tracking-widest mt-1 font-medium">Kurucu Ortak</p>
             </div>
           </div>
         </div>
