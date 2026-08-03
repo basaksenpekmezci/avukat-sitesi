@@ -202,7 +202,7 @@ export default function Page() {
 
       {/* NAVBAR */}
       <header className="w-full bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-stone-200/60">
-        <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between gap-3">
+        <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between gap-2">
           <div className="text-base sm:text-xl font-semibold text-stone-900 tracking-tight font-serif whitespace-nowrap">Av. Ayşe Şenpekmezci</div>
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-stone-600">
             <a href="#hakkimda" className="hover:text-[#C5A880] transition-colors">Hakkımızda</a>
@@ -220,9 +220,9 @@ export default function Page() {
             </a>
             <a
               href="tel:+905366309963"
-              className="md:hidden inline-flex items-center gap-1.5 sm:whitespace-nowrap bg-[#C5A880] hover:bg-[#b0936b] text-white px-3.5 py-2 sm:px-5 sm:py-2.5 text-xs font-semibold uppercase tracking-wider transition-colors"
+              className="md:hidden inline-flex items-center gap-1.5 whitespace-nowrap bg-[#C5A880] hover:bg-[#b0936b] text-white px-3 py-2 text-[11px] font-semibold transition-colors"
             >
-              <Phone size={14} />
+              <Phone size={13} />
               Bizi Arayın
             </a>
             <a href="#randevu" className="hidden sm:inline-block bg-[#C5A880] hover:bg-[#b0936b] text-white px-5 py-2.5 text-xs font-semibold uppercase tracking-wider transition-colors">
