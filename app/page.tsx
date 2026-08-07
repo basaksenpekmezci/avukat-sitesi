@@ -256,7 +256,7 @@ export default function Page() {
       {/* HERO ALANI */}
       <section className="max-w-6xl mx-auto px-6 py-16 md:py-28 grid md:grid-cols-12 gap-12 items-center">
         <div className="md:col-span-7 space-y-6 animate-fade-in-up">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#C5A880]">Hukuk Bürosu</span>
+          <span className="text-xs text-stone-600">Şenpekmezci Hukuk ve Danışmanlık</span>
           <h1 className="text-4xl sm:text-5xl font-serif text-stone-900 leading-tight">
             Hukukta Güven <br /><span className="italic font-light">ve Şeffaflık</span>
           </h1>
@@ -284,43 +284,26 @@ export default function Page() {
           </div>
         </div>
 
-        {/* Kurumsal Sağ Kart */}
-        <div className="md:col-span-5 flex justify-center md:justify-end animate-fade-in-up">
-          <div className="relative w-full max-w-[430px] aspect-[3/4] bg-[#FAF9F6] border border-stone-200 p-10 flex flex-col items-center text-center shadow-md">
-            <div className="space-y-4 w-full">
-              <div className="w-16 h-[1px] bg-[#C5A880] mx-auto"></div>
-              <h2 className="text-[22px] font-serif tracking-widest text-stone-900 uppercase font-medium leading-snug">
-                ŞENPEKMEZCİ <br /> <span className="text-[15px] font-light text-stone-500 tracking-normal block mt-1">HUKUK & DANIŞMANLIK</span>
-              </h2>
-              <div className="w-16 h-[1px] bg-[#C5A880] mx-auto"></div>
-            </div>
-
-            <div className="flex-1 w-full flex items-center justify-center">
-              <svg
-                viewBox="0 0 200 220"
-                className="w-[215px] h-[215px] md:w-[269px] md:h-[269px] justice-scale"
-                fill="none"
-              >
-                <g className="justice-scale-fixed">
-                  <line className="draw-path" pathLength={100} x1="100" y1="30" x2="100" y2="170" stroke="#C5A880" strokeWidth="1.5" strokeLinecap="round" style={{ animationDelay: "0s" }} />
-                  <line className="draw-path" pathLength={100} x1="70" y1="170" x2="130" y2="170" stroke="#C5A880" strokeWidth="1.5" strokeLinecap="round" style={{ animationDelay: "0.15s" }} />
-                  <circle className="draw-path" pathLength={100} cx="100" cy="30" r="5" stroke="#C5A880" strokeWidth="1.5" style={{ animationDelay: "0.5s" }} />
-                </g>
-                <g className="justice-scale-beam" style={{ transformOrigin: "100px 30px", transformBox: "view-box" }}>
-                  <line className="draw-path" pathLength={100} x1="35" y1="30" x2="165" y2="30" stroke="#C5A880" strokeWidth="1.5" strokeLinecap="round" style={{ animationDelay: "0.9s" }} />
-                  <line className="draw-path" pathLength={100} x1="35" y1="30" x2="35" y2="75" stroke="#C5A880" strokeWidth="1.2" style={{ animationDelay: "1.6s" }} />
-                  <path className="draw-path" pathLength={100} d="M15 75 Q35 100 55 75" stroke="#C5A880" strokeWidth="1.2" strokeLinecap="round" style={{ animationDelay: "1.9s" }} />
-                  <line className="draw-path" pathLength={100} x1="165" y1="30" x2="165" y2="75" stroke="#C5A880" strokeWidth="1.2" style={{ animationDelay: "1.6s" }} />
-                  <path className="draw-path" pathLength={100} d="M145 75 Q165 100 185 75" stroke="#C5A880" strokeWidth="1.2" strokeLinecap="round" style={{ animationDelay: "1.9s" }} />
-                </g>
-              </svg>
-            </div>
-
-            <div className="pb-2">
-              <h3 className="text-xl font-serif text-stone-900 tracking-wide">Ayşe Şenpekmezci</h3>
-              <p className="text-xs text-[#C5A880] uppercase tracking-widest mt-1 font-medium">Kurucu Ortak</p>
-            </div>
-          </div>
+        {/* Terazi Görseli */}
+        <div className="md:col-span-5 flex justify-center md:justify-end items-center animate-fade-in-up">
+          <svg
+            viewBox="0 0 200 220"
+            className="w-[260px] h-[260px] sm:w-[300px] sm:h-[300px] md:w-[380px] md:h-[380px] justice-scale"
+            fill="none"
+          >
+            <g className="justice-scale-fixed">
+              <line className="draw-path" pathLength={100} x1="100" y1="30" x2="100" y2="170" stroke="#C5A880" strokeWidth="1.5" strokeLinecap="round" style={{ animationDelay: "0s" }} />
+              <line className="draw-path" pathLength={100} x1="70" y1="170" x2="130" y2="170" stroke="#C5A880" strokeWidth="1.5" strokeLinecap="round" style={{ animationDelay: "0.15s" }} />
+              <circle className="draw-path" pathLength={100} cx="100" cy="30" r="5" stroke="#C5A880" strokeWidth="1.5" style={{ animationDelay: "0.5s" }} />
+            </g>
+            <g className="justice-scale-beam" style={{ transformOrigin: "100px 30px", transformBox: "view-box" }}>
+              <line className="draw-path" pathLength={100} x1="35" y1="30" x2="165" y2="30" stroke="#C5A880" strokeWidth="1.5" strokeLinecap="round" style={{ animationDelay: "0.9s" }} />
+              <line className="draw-path" pathLength={100} x1="35" y1="30" x2="35" y2="75" stroke="#C5A880" strokeWidth="1.2" style={{ animationDelay: "1.6s" }} />
+              <path className="draw-path" pathLength={100} d="M15 75 Q35 100 55 75" stroke="#C5A880" strokeWidth="1.2" strokeLinecap="round" style={{ animationDelay: "1.9s" }} />
+              <line className="draw-path" pathLength={100} x1="165" y1="30" x2="165" y2="75" stroke="#C5A880" strokeWidth="1.2" style={{ animationDelay: "1.6s" }} />
+              <path className="draw-path" pathLength={100} d="M145 75 Q165 100 185 75" stroke="#C5A880" strokeWidth="1.2" strokeLinecap="round" style={{ animationDelay: "1.9s" }} />
+            </g>
+          </svg>
         </div>
       </section>
 
