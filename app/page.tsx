@@ -256,7 +256,7 @@ export default function Page() {
       {/* HERO ALANI */}
       <section className="max-w-6xl mx-auto px-6 py-16 md:py-28 grid md:grid-cols-12 gap-12 items-center">
         <div className="md:col-span-7 space-y-6 animate-fade-in-up">
-          <span className="text-xs text-stone-600">Şenpekmezci Hukuk ve Danışmanlık</span>
+          <span className="block text-2xl md:text-3xl font-serif font-semibold text-[#C5A880]">Şenpekmezci Hukuk ve Danışmanlık</span>
           <h1 className="text-4xl sm:text-5xl font-serif text-stone-900 leading-tight">
             Hukukta Güven <br /><span className="italic font-light">ve Şeffaflık</span>
           </h1>
@@ -292,16 +292,24 @@ export default function Page() {
             fill="none"
           >
             <g className="justice-scale-fixed">
-              <line className="draw-path" pathLength={100} x1="100" y1="30" x2="100" y2="170" stroke="#C5A880" strokeWidth="1.5" strokeLinecap="round" style={{ animationDelay: "0s" }} />
-              <line className="draw-path" pathLength={100} x1="70" y1="170" x2="130" y2="170" stroke="#C5A880" strokeWidth="1.5" strokeLinecap="round" style={{ animationDelay: "0.15s" }} />
-              <circle className="draw-path" pathLength={100} cx="100" cy="30" r="5" stroke="#C5A880" strokeWidth="1.5" style={{ animationDelay: "0.5s" }} />
+              <line className="draw-path" pathLength={100} x1="98.3" y1="30" x2="98.3" y2="170" stroke="#C5A880" strokeWidth="1" strokeLinecap="round" style={{ animationDelay: "0s" }} />
+              <line className="draw-path" pathLength={100} x1="101.7" y1="30" x2="101.7" y2="170" stroke="#C5A880" strokeWidth="1" strokeLinecap="round" style={{ animationDelay: "0s" }} />
+              <line className="draw-path" pathLength={100} x1="70" y1="168.3" x2="130" y2="168.3" stroke="#C5A880" strokeWidth="1" strokeLinecap="round" style={{ animationDelay: "0.15s" }} />
+              <line className="draw-path" pathLength={100} x1="70" y1="171.7" x2="130" y2="171.7" stroke="#C5A880" strokeWidth="1" strokeLinecap="round" style={{ animationDelay: "0.15s" }} />
+              <circle className="draw-path" pathLength={100} cx="100" cy="30" r="3.3" stroke="#C5A880" strokeWidth="1" style={{ animationDelay: "0.5s" }} />
+              <circle className="draw-path" pathLength={100} cx="100" cy="30" r="6.7" stroke="#C5A880" strokeWidth="1" style={{ animationDelay: "0.5s" }} />
             </g>
             <g className="justice-scale-beam" style={{ transformOrigin: "100px 30px", transformBox: "view-box" }}>
-              <line className="draw-path" pathLength={100} x1="35" y1="30" x2="165" y2="30" stroke="#C5A880" strokeWidth="1.5" strokeLinecap="round" style={{ animationDelay: "0.9s" }} />
-              <line className="draw-path" pathLength={100} x1="35" y1="30" x2="35" y2="75" stroke="#C5A880" strokeWidth="1.2" style={{ animationDelay: "1.6s" }} />
-              <path className="draw-path" pathLength={100} d="M15 75 Q35 100 55 75" stroke="#C5A880" strokeWidth="1.2" strokeLinecap="round" style={{ animationDelay: "1.9s" }} />
-              <line className="draw-path" pathLength={100} x1="165" y1="30" x2="165" y2="75" stroke="#C5A880" strokeWidth="1.2" style={{ animationDelay: "1.6s" }} />
-              <path className="draw-path" pathLength={100} d="M145 75 Q165 100 185 75" stroke="#C5A880" strokeWidth="1.2" strokeLinecap="round" style={{ animationDelay: "1.9s" }} />
+              <line className="draw-path" pathLength={100} x1="35" y1="28.3" x2="165" y2="28.3" stroke="#C5A880" strokeWidth="1" strokeLinecap="round" style={{ animationDelay: "0.9s" }} />
+              <line className="draw-path" pathLength={100} x1="35" y1="31.7" x2="165" y2="31.7" stroke="#C5A880" strokeWidth="1" strokeLinecap="round" style={{ animationDelay: "0.9s" }} />
+              <line className="draw-path" pathLength={100} x1="33.3" y1="30" x2="33.3" y2="75" stroke="#C5A880" strokeWidth="1" style={{ animationDelay: "1.6s" }} />
+              <line className="draw-path" pathLength={100} x1="36.7" y1="30" x2="36.7" y2="75" stroke="#C5A880" strokeWidth="1" style={{ animationDelay: "1.6s" }} />
+              <path className="draw-path" pathLength={100} d="M15 73.3 Q35 98.3 55 73.3" stroke="#C5A880" strokeWidth="1" strokeLinecap="round" style={{ animationDelay: "1.9s" }} />
+              <path className="draw-path" pathLength={100} d="M15 76.7 Q35 101.7 55 76.7" stroke="#C5A880" strokeWidth="1" strokeLinecap="round" style={{ animationDelay: "1.9s" }} />
+              <line className="draw-path" pathLength={100} x1="163.3" y1="30" x2="163.3" y2="75" stroke="#C5A880" strokeWidth="1" style={{ animationDelay: "1.6s" }} />
+              <line className="draw-path" pathLength={100} x1="166.7" y1="30" x2="166.7" y2="75" stroke="#C5A880" strokeWidth="1" style={{ animationDelay: "1.6s" }} />
+              <path className="draw-path" pathLength={100} d="M145 73.3 Q165 98.3 185 73.3" stroke="#C5A880" strokeWidth="1" strokeLinecap="round" style={{ animationDelay: "1.9s" }} />
+              <path className="draw-path" pathLength={100} d="M145 76.7 Q165 101.7 185 76.7" stroke="#C5A880" strokeWidth="1" strokeLinecap="round" style={{ animationDelay: "1.9s" }} />
             </g>
           </svg>
         </div>
