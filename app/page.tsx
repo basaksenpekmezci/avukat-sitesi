@@ -256,7 +256,6 @@ export default function Page() {
       {/* HERO ALANI */}
       <section className="max-w-6xl mx-auto px-6 py-16 md:py-28 grid md:grid-cols-12 gap-12 items-center">
         <div className="md:col-span-7 space-y-6 animate-fade-in-up">
-          <span className="block text-2xl md:text-3xl font-serif font-semibold text-[#C5A880]">Şenpekmezci Hukuk ve Danışmanlık</span>
           <h1 className="text-4xl sm:text-5xl font-serif text-stone-900 leading-tight">
             Hukukta Güven <br /><span className="italic font-light">ve Şeffaflık</span>
           </h1>
@@ -286,7 +285,7 @@ export default function Page() {
 
         {/* Terazi Görseli */}
         <div className="md:col-span-5 flex justify-center md:justify-end items-center animate-fade-in-up">
-          <div className="flex flex-col items-center">
+          <div className="w-fit mx-auto flex flex-col items-center">
           <svg
             viewBox="0 0 200 220"
             className="w-[260px] h-[260px] sm:w-[300px] sm:h-[300px] md:w-[380px] md:h-[380px] justice-scale"
@@ -313,7 +312,7 @@ export default function Page() {
               <path className="draw-path" pathLength={100} d="M145 76.7 Q165 101.7 185 76.7" stroke="#C5A880" strokeWidth="1" strokeLinecap="round" style={{ animationDelay: "1.9s" }} />
             </g>
           </svg>
-          <p className="mt-6 text-lg md:text-xl font-serif text-stone-900 tracking-wide text-center">Av. Ayşe Şenpekmezci</p>
+          <p className="mt-8 w-full text-lg md:text-xl font-serif font-semibold text-stone-900 tracking-wide text-center">Av. Ayşe Şenpekmezci</p>
           </div>
         </div>
       </section>
