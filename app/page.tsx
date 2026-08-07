@@ -327,7 +327,7 @@ export default function Page() {
           </div>
           
           <p className="text-stone-300 font-light max-w-3xl mx-auto leading-relaxed text-base md:text-lg">
-            Şenpekmezci Hukuk ve Danışmanlık Bürosu; müvekkillerine hukukun her alanında güven, şeffafik ve meslek etik ilkelerine tam bağlılık esasıyla hizmet sunar. Gaziantep merkezli büromuz, genç, dinamik ve yenilikçi bakış açısıyla hukuki süreçleri karmaşadan uzak, şeffaf ve sonuç odaklı bir şekilde yönetmektedir.
+            Şenpekmezci Hukuk ve Danışmanlık Bürosu; müvekkillerine hukukun her alanında güven, şeffaflık ve meslek etik ilkelerine tam bağlılık esasıyla hizmet sunar. Gaziantep merkezli büromuz, genç, dinamik ve yenilikçi bakış açısıyla hukuki süreçleri karmaşadan uzak, şeffaf ve sonuç odaklı bir şekilde yönetmektedir.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 pt-12 max-w-4xl mx-auto border-t border-stone-800/60 text-left">
@@ -495,7 +495,7 @@ export default function Page() {
           <div className="md:col-span-8 space-y-4">
             <h3 className="text-base text-stone-900 font-medium font-serif">Şenpekmezci Hukuk ve Danışmanlık Bürosu</h3>
             <div className="space-y-2 font-light text-stone-600">
-              <p className="flex items-center gap-2"><MapPin size={16} className="text-[#C5A880]" /> Fatih Mah. 35 Nolu Sk. Kardelen Apt A Blok Kat:5 Daire:13 Şehitkamil/Gaziantep </p>
+              <p className="flex items-center gap-2"><MapPin size={16} className="text-[#C5A880]" /> Fatih Mah. 35 Nolu Sk. Şehitkamil/Gaziantep </p>
               <p className="flex items-center gap-2">
                 <Phone size={16} className="text-[#C5A880]" />
                 <a href="tel:+905366309963" className="hover:text-[#C5A880] transition-colors">+90 536 630 99 63</a>
