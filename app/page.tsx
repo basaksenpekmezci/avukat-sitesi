@@ -287,8 +287,8 @@ export default function Page() {
         <div className="md:col-span-5 flex justify-center md:justify-end items-center animate-fade-in-up">
           <div className="w-fit mx-auto flex flex-col items-center">
           <svg
-            viewBox="0 0 200 220"
-            className="w-[260px] h-[260px] sm:w-[300px] sm:h-[300px] md:w-[380px] md:h-[380px] justice-scale"
+            viewBox="0 12 200 168"
+            className="w-[260px] h-[219px] sm:w-[300px] sm:h-[252px] md:w-[380px] md:h-[319px] justice-scale"
             fill="none"
           >
             <g className="justice-scale-fixed">
@@ -312,7 +312,7 @@ export default function Page() {
               <path className="draw-path" pathLength={100} d="M145 76.7 Q165 101.7 185 76.7" stroke="#C5A880" strokeWidth="1" strokeLinecap="round" style={{ animationDelay: "1.9s" }} />
             </g>
           </svg>
-          <p className="mt-8 w-full text-lg md:text-xl font-serif font-semibold text-stone-900 tracking-wide text-center">Av. Ayşe Şenpekmezci</p>
+          <p className="mt-2 w-full text-lg md:text-xl font-serif font-semibold text-stone-900 tracking-wide text-center">Av. Ayşe Şenpekmezci</p>
           </div>
         </div>
       </section>
